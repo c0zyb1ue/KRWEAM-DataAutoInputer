@@ -8,6 +8,9 @@ class Database {
      async query(sql, params){
           return this.database.query(sql, params);
      }
+     async initialize(){
+          return this.database.initialize();
+     }
 };
 
 const krweamDataSource = new DataSource({
@@ -31,5 +34,5 @@ const envToArr = (productData) => {
      return PDarr;
 } 
 
-module.exports ={ envToArr, krweamDatabase, krweamDataSource }
+module.exports ={ envToArr, krweamDatabase }
 
