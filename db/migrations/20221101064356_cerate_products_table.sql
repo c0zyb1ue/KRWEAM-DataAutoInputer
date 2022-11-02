@@ -6,6 +6,7 @@ CREATE TABLE products (
     thumbnail VARCHAR(3000) NOT NULL,
     model_number VARCHAR(100),
     released_price DECIMAL(9,2) NOT NULL,
+    color VARCHAR(200) NULL,
     category_id INT NOT NULL,
     gender_id INT NOT NULL,
     brand_id INT NOT NULL,
