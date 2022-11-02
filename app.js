@@ -1,5 +1,5 @@
 const fileSystem = require('fs');
-const { envToArr, krweamDatabase, krweamDataSource } = require('./modules.js');
+const { envToArr, krweamDatabase } = require('./modules.js');
 
 // brand -> sizes -> products
 
@@ -8,7 +8,7 @@ const sizes = envToArr(fileSystem.readFileSync("./size.csv", 'utf-8'));
 const brands = envToArr(fileSystem.readFileSync("./brands.csv", 'utf-8'));
 
 const main = async() => {
-     await krweamDataSource.initialize()
+     await krweamDatabase.initialize()
      .then(() => {
           console.log("Data Source has been initialized");
      })
